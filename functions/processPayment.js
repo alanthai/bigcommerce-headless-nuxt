@@ -12,6 +12,7 @@ const processPayment = async ({ queryStringParameters, body }, context) => {
     paymentData.payment.instrument.expiry_year
   );
 
+  console.log('processPayment.js');
   const tokenResult = await customAxios('api').post(
     `/stores/${process.env.STORE_HASH}/v3/payments/access_tokens`,
     {

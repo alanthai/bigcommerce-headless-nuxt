@@ -14,6 +14,7 @@ const customerLogin = async ({ body }, context) => {
     item.includes('SHOP_TOKEN')
   );
 
+  console.log({ cookies: cookies[0], getCustomer: queries.getCustomer() });
   const { data, status } = await customAxios('graphql', cookies[0]).post(
     `/graphql`,
     {

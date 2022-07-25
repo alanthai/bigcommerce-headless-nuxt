@@ -20,6 +20,7 @@ module.exports.customAxios = (action, cookie = null, auth = null) => {
   if (cookie) {
     headers.Cookie = cookie;
   }
+  console.log({ headers, baseURL, action });
   return axios.create({
     baseURL,
     headers,

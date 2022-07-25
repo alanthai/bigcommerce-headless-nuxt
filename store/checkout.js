@@ -265,6 +265,7 @@ export const actions = {
       if (!couponCode)
         this.$toast.error('At least, you should input your coupon code');
       else {
+        console.log('addCoupons', { API_URL, checkoutId });
         await axios.post(`${API_URL}/addCoupons`, {
           checkoutId,
           couponCode

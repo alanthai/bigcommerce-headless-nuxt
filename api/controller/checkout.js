@@ -121,7 +121,7 @@ export const addCoupons = async (req, res, next) => {
   try {
     const { checkoutId, couponCode } = req.body;
 
-    const { data } = await customAxios('api').get(
+    const { data } = await customAxios('api').post(
       `/stores/${process.env.STORE_HASH}/v3/checkouts/${checkoutId}/coupons`,
       {
         coupon_code: couponCode

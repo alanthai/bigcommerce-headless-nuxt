@@ -1,7 +1,7 @@
 const modules = [
   '@nuxtjs/dotenv',
   '@nuxtjs/axios',
-  '@nuxtjs/pwa',
+  // ['@nuxtjs/pwa', { workbox: false }],
   '@nuxtjs/toast',
   '@nuxtjs/proxy'
 ];

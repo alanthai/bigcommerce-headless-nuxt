@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "rewrites": [
     {
       "source": "/getProductsByCategory",
@@ -52,21 +53,20 @@
     { "source": "/storefront", "destination": "/api/routes" },
     { "source": "/getHomePageContentWidgets", "destination": "/api/routes" }
   ],
-  "env": {
-    "APP_NAME": "BigCommerce Nuxt Vue Starter",
-    "PORT": "3000",
-    "JWT_SECRET": "***",
-    "BC_API_URL": "https://api.bigcommerce.com",
-    "STORE_HASH": "***",
-    "API_TOKEN": "***",
-    "API_CLIENT_ID": "***",
-    "API_SECRET": "***",
-    "CHANNEL_ID": "***",
-    "BASE_URL": "https://store-storehash-channelid.mybigcommerce.com",
-    "STOREFRONT_API_TOKEN": "***",
-    "CHECKOUT_TYPE": "embedded",
-    "PAYMENT_URL": "https://payments.bigcommerce.com",
-    "DEPLOY_PLATFORM": "vercel",
-    "NETLIFY_API_URL": ""
-  }
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/vercel-builder",
+      "config": {
+        "internalServer": true,
+        "tscOptions": {
+          "sourceMap": true
+        }
+      }
+    },
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    }
+  ]
 }

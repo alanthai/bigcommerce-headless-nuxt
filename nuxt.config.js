@@ -17,7 +17,7 @@ export default {
   parallel: true,
   cache: true,
   hardSource: true,
-  target: 'static',
+  target: 'server',
   /**
    ** Global Env Varialbes
    */

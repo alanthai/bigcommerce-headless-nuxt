@@ -1,5 +1,7 @@
 # bc-nuxt-vue-starter
 
+https://github.com/bigcommerce/bc-nuxt-vue-starter
+
 > BigCommerce + Nuxt + Storefront UI Starter
 
 ## UI Features

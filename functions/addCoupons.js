@@ -4,7 +4,7 @@ const permission = require('./middleware/permission');
 const processPayment = async ({ body }, context) => {
   const { checkoutId, couponCode } = JSON.parse(body);
 
-  const { data, status } = await customAxios('api').get(
+  const { data, status } = await customAxios('api').post(
     `/stores/${process.env.STORE_HASH}/v3/checkouts/${checkoutId}/coupons`,
     {
       coupon_code: couponCode

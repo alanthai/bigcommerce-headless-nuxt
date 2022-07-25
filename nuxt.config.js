@@ -8,7 +8,7 @@ import axios from './config/axios';
 import toast from './config/toast';
 import env from './config/env';
 import proxy from './config/proxy';
-import sentry from './config/sentry';
+// import sentry from './config/sentry';
 
 export default {
   ssr: false,
@@ -45,7 +45,7 @@ export default {
   // Doc: https://axios.nuxtjs.org/usage
   modules,
   // Sentry configuration
-  sentry,
+  // sentry,
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
